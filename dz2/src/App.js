@@ -1,29 +1,14 @@
 import './App.css';
-import React from "react";
+import React from 'react';
+import Timer from "./components/Time";
 
-class App extends React.Component{
-  constructor() {
-    super();
-    this.state = {
-      time: new Date()
-    }
-  }
-  upDateTime = () =>{
-    this.setState({
-      time: new Date()
-    })
-  }
-    intervalid = setInterval(this.upDateTime,1000)
-
-  render() {
-    return(
+const App = () => {
+    return (
         <div>
-          <h2>{this.state.time.toLocaleTimeString()}</h2>
+            <Timer/>
         </div>
-    )
-  }
-}
+    );
+};
+
 export default App;
-
-
 
